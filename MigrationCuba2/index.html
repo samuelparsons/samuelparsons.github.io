@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Med</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+</head>
+<body>
+
+<div id='map'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1Ijoic3BhcnNvbnNkYXRhdml6IiwiYSI6ImNqczY2cHJnbzBmYmQ0NHM4MmtqMnB5N2EifQ.jzweewuIsYwC0k3UxWWarQ';
+
+var bounds = [
+    [-85.9788512525,31.7199672381],[-57.9417418775,9.6995547574]
+];
+
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/sparsonsdataviz/ck63yk1cv15ua1jo4i0fx8kmy',
+    center: [-74.09572, 21.763945],
+    zoom:6,
+    bearing: -16,
+    pitch: 42.5,
+    maxBounds: bounds
+});
+    map.addControl(new mapboxgl.NavigationControl());
+    
+</script>
+
+</body>
+</html>
