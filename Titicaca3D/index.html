@@ -24,6 +24,9 @@
         bearing: 87.9,
         style: 'mapbox://styles/sparsonsdataviz/ckfxuqmmz0khl19pfeytmj0ty?fresh=true'
     });
+	
+	// add controls in
+	map.addControl(new mapboxgl.NavigationControl());   
 
     map.on('load', function () {
         map.addSource('mapbox-dem', {
@@ -33,8 +36,7 @@
             'maxzoom': 14
         });
 	;
-    	// add controls in
-	map.addControl(new mapboxgl.NavigationControl());    
+ 
 	    
         // add the DEM source as a terrain layer with exaggerated height
         map.setTerrain({ 'source': 'mapbox-dem', 'exaggeration': 1.7 });
