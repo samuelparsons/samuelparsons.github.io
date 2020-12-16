@@ -32,6 +32,10 @@
             'tileSize': 512,
             'maxzoom': 14
         });
+	;
+    	// add controls in
+	map.addControl(new mapboxgl.NavigationControl());    
+	    
         // add the DEM source as a terrain layer with exaggerated height
         map.setTerrain({ 'source': 'mapbox-dem', 'exaggeration': 1.7 });
 
